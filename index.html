@@ -7,39 +7,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Manuale:wght@500;700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <title>JE - Programdor web</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="header-nav">
         <div class="container-logo">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 457 512" style="enable-background:new 0 0 457 512;" xml:space="preserve">
                 <g>
-                    <path d="M127.32,51.91v30.47H68.68v335.57h58.64v30.47h-91.9V51.91H127.32z"/>
-                    <path d="M372.68,448.09v-30.47h58.64V82.05h-58.64V51.59h91.9v396.5H372.68z"/>
-                    <path d="M236.8,386.44v-273.2h135.88v26.85H267.2v94.36h78.45v26.45H267.2v98.7h105.48v26.85H236.8z"/>
+                    <path d="M204.46,507V6h249.19v49.23H260.21v173.04h143.86v48.51H260.21v181h193.44V507H204.46z"/>
                     <g>
-                        <path d="M127.32,386.44v-24.67c17.16,1.18,39.61-2.08,44.5-6.26c4.88-4.17,7.33-15.08,7.33-32.72V113.24h27.18l0.36,213.48 c0,20.03-3.34,34.69-10.01,43.98c-5.49,7.87-16.33,12.75-32.54,14.66C157.69,386.08,137.81,386.44,127.32,386.44z"/>
+                        <path d="M3.7,507v-45.25c31.47,2.16,72.63-3.82,81.6-11.47c8.95-7.65,13.44-27.65,13.44-60V6h49.84l0.66,391.49 c0,36.72-6.13,63.61-18.36,80.66c-10.06,14.43-29.95,23.38-59.67,26.89C59.39,506.34,22.93,507,3.7,507z"/>
                     </g>
                 </g>
             </svg>
         </div>
 
         <div class="container-nav-menu">
-            <svg viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg">
-                <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
-            </svg>
+            <div id="menu-icon" class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <!-- // Header -->
 
+    <!-- Full menu -->
+    <div id="nav-menu" class="menu">
+            <nav class="nav-items">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutme">About us</a></li>
+                    <li><a href="#services">News</a></li>
+                    <li><a href="#portfolio">Contact</a></li>
+                </ul>
+            </nav>
+    </div>
+    <!-- Full menu -->
+
     <!-- Home -->
     <section id="home">
+        <div id="particles-js"></div>
         <div class="home-content">
             <h1>Josué Espinosa</h1>
-            <h2>Programador Frontend</h2>
+            <h2>Programador <span class="typed-text">Frontend</span></h2>
         </div>
     </section>
     <!-- // Home -->
@@ -51,7 +66,13 @@
         <div class="content-box">
             <h3>¿Quién soy?</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecati, libero voluptatibus magni voluptates nesciunt magnam inventore hic ea ipsum incidunt corrupti atque nisi suscipit non reprehenderit!</p>
+            <p>Soy programdor web con mas de 5 años de experiencia, desarrollando paginas web personales hasta sistemas web para la gestión de información, también tengo experiencia desarrollando aplicaciones móviles para Android e iOS.</p>
+
+            <h4 class="title-service">¿Necesitas que te apoye en algún proyecto?</h4>
+            <a class="home-link-contact" href="mailto:benjamin.espinosa.dev@gmail.com">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M374.09,101c-.11.23-.21.46-.31.7-.34.75-.67,1.5-1,2.26l-.36.9c-.27.71-.54,1.42-.79,2.14-.12.35-.24.7-.35,1-.23.68-.44,1.37-.64,2.07l-.33,1.15q-.27,1-.51,2c-.1.41-.2.82-.28,1.23-.15.67-.28,1.36-.4,2-.08.42-.16.84-.23,1.27-.11.69-.2,1.4-.29,2.1-.05.42-.11.83-.16,1.25-.08.77-.13,1.54-.19,2.31,0,.36-.06.72-.08,1.09-.06,1.13-.09,2.27-.09,3.41v0c0,1,0,2,.07,2.94l0,.62c.05.95.12,1.89.21,2.83l.06.46c.09.87.2,1.72.32,2.57,0,.15,0,.31.07.46.14.92.31,1.84.49,2.75l.12.59c.2.92.4,1.84.64,2.75h0c.23.92.5,1.82.77,2.71.06.19.12.38.17.57.28.88.57,1.74.88,2.59.05.15.11.29.16.43.29.78.6,1.55.92,2.32.05.14.11.28.17.42.35.83.73,1.65,1.11,2.47l.27.53c.4.82.81,1.64,1.24,2.44l0,0h0a64.21,64.21,0,0,0,29.56,27.63l.37.17c1.78.8,3.59,1.53,5.45,2.17l.95.32,1.5.47c.45.14.9.26,1.36.39l1.92.5c.57.14,1.14.27,1.72.39l1.15.24,1.83.32.93.16c.9.13,1.81.24,2.72.34l.77.07c.73.07,1.47.13,2.22.17l.85.05c1,0,1.94.07,2.93.07h0c1.15,0,2.29,0,3.43-.09l1.09-.09c.77,0,1.54-.11,2.3-.19.42,0,.83-.1,1.25-.16.7-.08,1.41-.17,2.1-.28l1.27-.23c.68-.12,1.36-.25,2-.39l1.24-.29c.67-.16,1.35-.32,2-.51.39-.1.78-.21,1.16-.33.69-.2,1.37-.41,2.05-.63l1.07-.36c.7-.24,1.4-.5,2.1-.77l.94-.37c.74-.3,1.47-.62,2.19-.95l.77-.34c.8-.37,1.58-.77,2.36-1.17.17-.09.35-.17.52-.27.91-.48,1.8-1,2.68-1.5l.12-.07a63.95,63.95,0,1,0-89.21-84.88l-.21.39C374.9,99.34,374.48,100.17,374.09,101Z'/><path d='M371.51,202.43l-105.69,82.2a16,16,0,0,1-19.64,0L89.55,162.81l19.64-25.26L256,251.73l94.36-73.39A95.81,95.81,0,0,1,349,80H48A16,16,0,0,0,32,96V416a16,16,0,0,0,16,16H464a16,16,0,0,0,16-16V211.13a95.75,95.75,0,0,1-108.49-8.7Z'/></svg>
+                <span>Contáctame</span>
+            </a>
         </div>
     </section>
     <!-- // About me -->
@@ -80,8 +101,8 @@
                         </svg>
                     </div>
 
-                    <h4 class="title-servive">Aplicaciones móviles</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecat</p>
+                    <!-- <h4 class="title-service">Aplicaciones móviles</h4> -->
+                    <p>Desarrollo de aplicaciones móviles para iOS y Android</p>
                 </div>
 
                 <div class="item-service">
@@ -95,8 +116,8 @@
                         </svg>
                     </div>
 
-                    <h4 class="title-servive">Sistemas web</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecat</p>
+                    <!-- <h4 class="title-service">Sistemas web</h4> -->
+                    <p>Desarrollo de sistemas web para la gestión de información</p>
                 </div>
 
                 <div class="item-service">
@@ -119,8 +140,8 @@
                         </svg>
                     </div>
 
-                    <h4 class="title-servive">Diseño</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecat</p>
+                    <!-- <h4 class="title-service">Diseño</h4> -->
+                    <p>Diseño de paginas web y aplicaciones móviles</p>
                 </div>
             </div>
         </div>
@@ -135,14 +156,48 @@
             <h3>Mi portafolio</h3>
 
             <div class="container-project">
-                <div class="project-media">
-                    <img src="https://dummyimage.com/600x400/f7f7f7/b8b8b8.png&text=Image+work">
+
+                <div class="silder-container">
+                    <div class="slide-item">
+                        <div id="slide-1" class="item-work">
+                            <div class="project-media">
+                                <img src="https://dummyimage.com/600x400/f7f7f7/b8b8b8.png&text=1+Image+work">
+                            </div>
+            
+                            <div class="project-description">
+                                <h4 class="title-service">1 - Name work</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecati, libero voluptatibus magni voluptates nesciunt magnam inventore hic ea ipsum incidunt corrupti atque nisi suscipit non reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-item">
+                        <div id="slide-1" class="item-work">
+                            <div class="project-media">
+                                <img src="https://dummyimage.com/600x400/f7f7f7/b8b8b8.png&text=1+Image+work">
+                            </div>
+            
+                            <div class="project-description">
+                                <h4 class="title-service">1 - Name work</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecati, libero voluptatibus magni voluptates nesciunt magnam inventore hic ea ipsum incidunt corrupti atque nisi suscipit non reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-item">
+                        <div id="slide-1" class="item-work">
+                            <div class="project-media">
+                                <img src="https://dummyimage.com/600x400/f7f7f7/b8b8b8.png&text=1+Image+work">
+                            </div>
+            
+                            <div class="project-description">
+                                <h4 class="title-service">1 - Name work</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecati, libero voluptatibus magni voluptates nesciunt magnam inventore hic ea ipsum incidunt corrupti atque nisi suscipit non reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="project-description">
-                    <h4 class="title-servive">Name work</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo tempora maxime obcaecati, libero voluptatibus magni voluptates nesciunt magnam inventore hic ea ipsum incidunt corrupti atque nisi suscipit non reprehenderit!</p>
-                </div>
             </div>
         </div>
     </section>
@@ -154,27 +209,30 @@
         <div class="content-box">
             <div class="container-footer">
                 <div class="container-logo">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 457 512" style="enable-background:new 0 0 457 512;" xml:space="preserve">
                         <g>
-                            <path d="M127.32,51.91v30.47H68.68v335.57h58.64v30.47h-91.9V51.91H127.32z"/>
-                            <path d="M372.68,448.09v-30.47h58.64V82.05h-58.64V51.59h91.9v396.5H372.68z"/>
-                            <path d="M236.8,386.44v-273.2h135.88v26.85H267.2v94.36h78.45v26.45H267.2v98.7h105.48v26.85H236.8z"/>
+                            <path d="M204.46,507V6h249.19v49.23H260.21v173.04h143.86v48.51H260.21v181h193.44V507H204.46z"/>
                             <g>
-                                <path d="M127.32,386.44v-24.67c17.16,1.18,39.61-2.08,44.5-6.26c4.88-4.17,7.33-15.08,7.33-32.72V113.24h27.18l0.36,213.48 c0,20.03-3.34,34.69-10.01,43.98c-5.49,7.87-16.33,12.75-32.54,14.66C157.69,386.08,137.81,386.44,127.32,386.44z"/>
+                                <path d="M3.7,507v-45.25c31.47,2.16,72.63-3.82,81.6-11.47c8.95-7.65,13.44-27.65,13.44-60V6h49.84l0.66,391.49 c0,36.72-6.13,63.61-18.36,80.66c-10.06,14.43-29.95,23.38-59.67,26.89C59.39,506.34,22.93,507,3.7,507z"/>
                             </g>
                         </g>
                     </svg>
 
-                    <p>© 2020 Josué Espinosa</p>
+                    <p>© <span class="year-text"></span> Josué Benjamín Espinosa Alvarado</p>
                 </div>
                 <div class="container-email">
                     <a href="mailto:benjamin.espinosa.dev@gmail.com">
-                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><title>ionicons-v5-o</title><path d='M374.09,101c-.11.23-.21.46-.31.7-.34.75-.67,1.5-1,2.26l-.36.9c-.27.71-.54,1.42-.79,2.14-.12.35-.24.7-.35,1-.23.68-.44,1.37-.64,2.07l-.33,1.15q-.27,1-.51,2c-.1.41-.2.82-.28,1.23-.15.67-.28,1.36-.4,2-.08.42-.16.84-.23,1.27-.11.69-.2,1.4-.29,2.1-.05.42-.11.83-.16,1.25-.08.77-.13,1.54-.19,2.31,0,.36-.06.72-.08,1.09-.06,1.13-.09,2.27-.09,3.41v0c0,1,0,2,.07,2.94l0,.62c.05.95.12,1.89.21,2.83l.06.46c.09.87.2,1.72.32,2.57,0,.15,0,.31.07.46.14.92.31,1.84.49,2.75l.12.59c.2.92.4,1.84.64,2.75h0c.23.92.5,1.82.77,2.71.06.19.12.38.17.57.28.88.57,1.74.88,2.59.05.15.11.29.16.43.29.78.6,1.55.92,2.32.05.14.11.28.17.42.35.83.73,1.65,1.11,2.47l.27.53c.4.82.81,1.64,1.24,2.44l0,0h0a64.21,64.21,0,0,0,29.56,27.63l.37.17c1.78.8,3.59,1.53,5.45,2.17l.95.32,1.5.47c.45.14.9.26,1.36.39l1.92.5c.57.14,1.14.27,1.72.39l1.15.24,1.83.32.93.16c.9.13,1.81.24,2.72.34l.77.07c.73.07,1.47.13,2.22.17l.85.05c1,0,1.94.07,2.93.07h0c1.15,0,2.29,0,3.43-.09l1.09-.09c.77,0,1.54-.11,2.3-.19.42,0,.83-.1,1.25-.16.7-.08,1.41-.17,2.1-.28l1.27-.23c.68-.12,1.36-.25,2-.39l1.24-.29c.67-.16,1.35-.32,2-.51.39-.1.78-.21,1.16-.33.69-.2,1.37-.41,2.05-.63l1.07-.36c.7-.24,1.4-.5,2.1-.77l.94-.37c.74-.3,1.47-.62,2.19-.95l.77-.34c.8-.37,1.58-.77,2.36-1.17.17-.09.35-.17.52-.27.91-.48,1.8-1,2.68-1.5l.12-.07a63.95,63.95,0,1,0-89.21-84.88l-.21.39C374.9,99.34,374.48,100.17,374.09,101Z'/><path d='M371.51,202.43l-105.69,82.2a16,16,0,0,1-19.64,0L89.55,162.81l19.64-25.26L256,251.73l94.36-73.39A95.81,95.81,0,0,1,349,80H48A16,16,0,0,0,32,96V416a16,16,0,0,0,16,16H464a16,16,0,0,0,16-16V211.13a95.75,95.75,0,0,1-108.49-8.7Z'/></svg>
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M374.09,101c-.11.23-.21.46-.31.7-.34.75-.67,1.5-1,2.26l-.36.9c-.27.71-.54,1.42-.79,2.14-.12.35-.24.7-.35,1-.23.68-.44,1.37-.64,2.07l-.33,1.15q-.27,1-.51,2c-.1.41-.2.82-.28,1.23-.15.67-.28,1.36-.4,2-.08.42-.16.84-.23,1.27-.11.69-.2,1.4-.29,2.1-.05.42-.11.83-.16,1.25-.08.77-.13,1.54-.19,2.31,0,.36-.06.72-.08,1.09-.06,1.13-.09,2.27-.09,3.41v0c0,1,0,2,.07,2.94l0,.62c.05.95.12,1.89.21,2.83l.06.46c.09.87.2,1.72.32,2.57,0,.15,0,.31.07.46.14.92.31,1.84.49,2.75l.12.59c.2.92.4,1.84.64,2.75h0c.23.92.5,1.82.77,2.71.06.19.12.38.17.57.28.88.57,1.74.88,2.59.05.15.11.29.16.43.29.78.6,1.55.92,2.32.05.14.11.28.17.42.35.83.73,1.65,1.11,2.47l.27.53c.4.82.81,1.64,1.24,2.44l0,0h0a64.21,64.21,0,0,0,29.56,27.63l.37.17c1.78.8,3.59,1.53,5.45,2.17l.95.32,1.5.47c.45.14.9.26,1.36.39l1.92.5c.57.14,1.14.27,1.72.39l1.15.24,1.83.32.93.16c.9.13,1.81.24,2.72.34l.77.07c.73.07,1.47.13,2.22.17l.85.05c1,0,1.94.07,2.93.07h0c1.15,0,2.29,0,3.43-.09l1.09-.09c.77,0,1.54-.11,2.3-.19.42,0,.83-.1,1.25-.16.7-.08,1.41-.17,2.1-.28l1.27-.23c.68-.12,1.36-.25,2-.39l1.24-.29c.67-.16,1.35-.32,2-.51.39-.1.78-.21,1.16-.33.69-.2,1.37-.41,2.05-.63l1.07-.36c.7-.24,1.4-.5,2.1-.77l.94-.37c.74-.3,1.47-.62,2.19-.95l.77-.34c.8-.37,1.58-.77,2.36-1.17.17-.09.35-.17.52-.27.91-.48,1.8-1,2.68-1.5l.12-.07a63.95,63.95,0,1,0-89.21-84.88l-.21.39C374.9,99.34,374.48,100.17,374.09,101Z'/><path d='M371.51,202.43l-105.69,82.2a16,16,0,0,1-19.64,0L89.55,162.81l19.64-25.26L256,251.73l94.36-73.39A95.81,95.81,0,0,1,349,80H48A16,16,0,0,0,32,96V416a16,16,0,0,0,16,16H464a16,16,0,0,0,16-16V211.13a95.75,95.75,0,0,1-108.49-8.7Z'/></svg>
                     </a>
                     <p><a href="mailto:benjamin.espinosa.dev@gmail.com">benjamin.espinosa.dev@gmail.com</a></p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
