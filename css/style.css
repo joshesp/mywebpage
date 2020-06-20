@@ -4,7 +4,7 @@ body {
     background-color: white;
     overflow-x: hidden;
     position: relative;
-    color: #3a434c;
+    color: #000506;
 }
 
 section {
@@ -13,39 +13,40 @@ section {
 }
 
 .text-primary {
-    color: #565DA3;
+    color: #042431;
 }
 .fill-primary {
-    fill: #565DA3;
+    fill: #042431;
 }
 .bg-primary {
-    background-color: #565DA3;
+    background-color: #042431;
     transition: all 0.6s ease;
 }
 .border-primary {
-    border-color: #565DA3;
+    border-color: #042431;
 }
 
 .text-accent,
 .text-accent-hover:hover {
-    color: #1F2772;
+    color: #225469;
 }
 .fill-accent {
-    fill: #1F2772;
+    fill: #225469;
 }
 .bg-accent,
 .bg-accent-hover:hover {
-    background-color: #1F2772;
+    background-color: #225469;
 }
 
 .text-light {
-    color: #A4A8D3;
+    color: #5D8DA1;
 }
 .fill-light {
-    fill: #A4A8D3;
+    fill: #5D8DA1;
 }
-.bg-light {
-    background-color: #A4A8D3;
+.bg-light,
+.bg-light-hover:hover {
+    background-color: #5D8DA1;
 }
 
 .text-gray,
@@ -63,13 +64,13 @@ section {
 }
 
 .text-dark {
-    color: #0c0d17;
+    color: #000506;
 }
 .fill-dark {
-    fill: #0c0d17;
+    fill: #000506;
 }
 .bg-dark {
-    background-color: #0c0d17;
+    background-color: #000506;
 }
 
 .text-white {
@@ -80,6 +81,10 @@ section {
 }
 .bg-white {
     background-color: #fff;
+}
+
+.text-gray-light2 {
+    color: #dbdfe1;
 }
 
 .text-gray-light {
@@ -152,7 +157,7 @@ header .container-logo svg {
 
 .header-bg .container-logo svg,
 header.active-nav .container-logo svg {
-    fill: #0c0d17;
+    fill: #042431;
 }
 
 header .container-nav-menu {
@@ -194,7 +199,7 @@ header .container-nav-menu {
 
 .header-bg .nav-icon span,
 .active-nav .nav-icon span {
-    background-color: #0c0d17;
+    background-color: #042431;
 }
 
 .nav-icon span:nth-child(1) {
