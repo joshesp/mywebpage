@@ -8,7 +8,7 @@ var particlesJSON = {
         }
       },
       "color": {
-        "value": "#1F2772"
+        "value": "#e0e0e0"
       },
       "shape": {
         "type": "circle",
@@ -48,7 +48,7 @@ var particlesJSON = {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#A4A8D3",
+        "color": "#e0e0e0",
         "opacity": 0.4,
         "width": 1
       },
@@ -120,7 +120,7 @@ var spanTxt = document.querySelector('.typed-text');
 var spanYear = document.querySelector('.year-text');
 
 var indexWord = 0;
-var words = ['Frontend', 'Backend'];
+var words = ['Front-end', 'Back-end'];
 var speed = 300;
 
 
@@ -175,6 +175,11 @@ function headerBG () {
     else header.classList.remove('header-bg');
 }
 
+function toggleMenu() {
+    document.getElementById('menu-icon').classList.toggle('active');
+    document.getElementById('nav-menu').classList.toggle('active');
+}
+
 
 // Typed text
 if (spanTxt) {
@@ -189,9 +194,10 @@ if (spanYear) {
 // header change bg color
 window.addEventListener("scroll", headerBG);
 
-document.getElementById('menu-icon').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.getElementById('nav-menu').classList.toggle('active');
+document.getElementById('menu-icon').addEventListener('click', toggleMenu);
+
+document.querySelectorAll('.item-nav').forEach(function(element) {
+  element.addEventListener('click', toggleMenu);
 });
 
 
@@ -204,9 +210,9 @@ $('.silder-container').slick({
     adaptiveHeight: true,
     draggable: true,
     prevArrow: '<button class="btn-slide-prev">' +
-                    '<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'328 112 184 256 328 400\' style=\'fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
+                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'328 112 184 256 328 400\' style=\'fill:none;stroke:#3a434c;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
                 '</button>',
     nextArrow: '<button class="btn-slide-next">' +
-                    '<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'184 112 328 256 184 400\' style=\'fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
+                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'184 112 328 256 184 400\' style=\'fill:none;stroke:#3a434c;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
                 '</button>'
 });
