@@ -210,9 +210,9 @@ $('.silder-container').slick({
     adaptiveHeight: true,
     draggable: true,
     prevArrow: '<button class="btn-slide-prev">' +
-                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'328 112 184 256 328 400\' style=\'fill:none;stroke:#3a434c;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
+                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'328 112 184 256 328 400\' style=\'fill:none;stroke:#1F2772;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
                 '</button>',
     nextArrow: '<button class="btn-slide-next">' +
-                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'184 112 328 256 184 400\' style=\'fill:none;stroke:#3a434c;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
+                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'184 112 328 256 184 400\' style=\'fill:none;stroke:#1F2772;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
                 '</button>'
 });

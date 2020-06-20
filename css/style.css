@@ -4,7 +4,7 @@ body {
     background-color: white;
     overflow-x: hidden;
     position: relative;
-    color: #3a434c;
+    color: #0c0d17;
 }
 
 section {
@@ -18,13 +18,12 @@ section {
 .fill-primary {
     fill: #565DA3;
 }
-.bg-primary {
+.bg-primary,
+.bg-primary-hover:hover {
     background-color: #565DA3;
     transition: all 0.6s ease;
 }
-.border-primary {
-    border-color: #565DA3;
-}
+
 
 .text-accent,
 .text-accent-hover:hover {
