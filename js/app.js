@@ -176,7 +176,7 @@ function headerBG () {
 }
 
 function toggleMenu() {
-    document.getElementById('menu-icon').classList.toggle('active');
+  document.querySelector('.header-nav').classList.toggle('active-nav');
     document.getElementById('nav-menu').classList.toggle('active');
 }
 

@@ -147,6 +147,12 @@ header .container-logo {
 
 header .container-logo svg {
     width: 20px;
+    fill: white;
+}
+
+.header-bg .container-logo svg,
+header.active-nav .container-logo svg {
+    fill: #0c0d17;
 }
 
 header .container-nav-menu {
@@ -183,6 +189,12 @@ header .container-nav-menu {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
+    background-color: white;
+}
+
+.header-bg .nav-icon span,
+.active-nav .nav-icon span {
+    background-color: #0c0d17;
 }
 
 .nav-icon span:nth-child(1) {
@@ -211,11 +223,11 @@ header .container-nav-menu {
     right: 0 !important;
 }
 
-.nav-icon.active span {
+.active-nav .nav-icon span {
     width: 85%;
 }
 
-.nav-icon.active span:nth-child(1) {
+.active-nav .nav-icon span:nth-child(1) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -224,12 +236,12 @@ header .container-nav-menu {
     left: 8px;
 }
 
-.nav-icon.active span:nth-child(2) {
+.active-nav .nav-icon span:nth-child(2) {
     width: 0%;
     opacity: 0;
 }
 
-.nav-icon.active span:nth-child(3) {
+.active-nav .nav-icon span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
