@@ -48,7 +48,7 @@
     "display": "standalone",
     "orientation": "portrait-primary",
     "background_color": "#fff",
-    "theme_color": "#565da3",
+    "theme_color": "#565DA3",
     "description": "Desarrollo de aplicaciones web y móviles.",
     "dir": "auto",
     "lang": "en-US"
