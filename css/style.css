@@ -145,7 +145,7 @@ header .container-logo {
 }
 
 header .container-logo svg {
-    width: 20px;
+    width: 25px;
     fill: white;
 }
 
@@ -369,7 +369,7 @@ header .container-nav-menu {
 }
 
 .service-image svg {
-    width: 8rem;
+    width: 5rem;
 }
 
 .title-work {
