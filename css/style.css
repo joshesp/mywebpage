@@ -336,6 +336,8 @@ header .container-nav-menu {
 
 .home-link-contact {
     display: flex;
+    height: 30px;
+    overflow: hidden;
     color: white;
     padding: 0.5em 2em;
     text-decoration: none;
