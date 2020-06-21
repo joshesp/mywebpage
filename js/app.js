@@ -120,8 +120,8 @@ var spanTxt = document.querySelector('.typed-text');
 var spanYear = document.querySelector('.year-text');
 
 var indexWord = 0;
-var words = ['Front-end', 'Back-end'];
-var speed = 300;
+var words = ['Front-end', 'Back-end', 'Freelancer'];
+var speed = 200;
 
 
 function typedText() {
@@ -143,7 +143,10 @@ function addText(str) {
             index++;
         } else {
             clearInterval(setInt);
-            backText(word)
+
+            setTimeout(function() {
+              backText(word)
+            }, 1500);
         }
 
         spanTxt.innerHTML = word;
@@ -203,16 +206,61 @@ document.querySelectorAll('.item-nav').forEach(function(element) {
 
 particlesJS('particles-js', particlesJSON);
 
-$('.silder-container').slick({
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    draggable: true,
-    prevArrow: '<button class="btn-slide-prev">' +
-                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'328 112 184 256 328 400\' style=\'fill:none;stroke:#1F2772;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
-                '</button>',
-    nextArrow: '<button class="btn-slide-next">' +
-                    '<svg class="fill-white" xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 512 512\'><title>ionicons-v5-a</title><polyline points=\'184 112 328 256 184 400\' style=\'fill:none;stroke:#1F2772;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px\'/></svg>' +
-                '</button>'
+$(function(){
+	$("#portafolio-gallery").elastic_grid({
+		'showAllText' : 'Todos',
+		'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
+		'hoverDirection': true,
+		'hoverDelay': 0,
+		'hoverInverse': false,
+		'expandingSpeed': 500,
+		'expandingHeight': 500,
+		'items' :[
+			{
+				'title'         : 'Papprika',
+				'description'   : 'Propuesta de diseño y desarrollo de la aplicación móvil para iOS y Android.',
+				'thumbnail'     : ['./assets/images/portafolio/papprika/papprika_sm.jpg', './assets/images/portafolio/papprika/papprika2_sm.jpg', './assets/images/portafolio/papprika/papprika3_sm.jpg'],
+				'large'         : ['./assets/images/portafolio/papprika/papprika.jpg', './assets/images/portafolio/papprika/papprika2.jpg', './assets/images/portafolio/papprika/papprika3.jpg'],
+				'img_title'     : ['Inicio', 'Platillos', 'Detalle del platillo'],
+				'button_list'   : [],
+				'tags'          : ['Self Portrait']
+      },
+      {
+				'title'         : 'Daymarket',
+				'description'   : 'Propuesta y maquetación del sitio web.',
+				'thumbnail'     : ['./assets/images/portafolio/daymarket/daymarket1_sm.jpg', './assets/images/portafolio/daymarket/daymarket2_sm.jpg', './assets/images/portafolio/daymarket/daymarket3_sm.jpg'],
+				'large'         : ['./assets/images/portafolio/daymarket/daymarket1.jpg', './assets/images/portafolio/daymarket/daymarket2.jpg', './assets/images/portafolio/daymarket/daymarket3.jpg'],
+				'img_title'     : ['Inicio', 'Información del sitio', 'Selector de recetas favoritas'],
+				'button_list'   : [],
+				'tags'          : ['Self Portrait']
+      },
+      {
+				'title'         : 'Ache',
+				'description'   : 'Propuesta de diseño y desarrollo de la aplicación móvil para iOS y Android.',
+				'thumbnail'     : ['./assets/images/portafolio/ache/ache1_sm.jpg', './assets/images/portafolio/ache/ache2_sm.jpg', './assets/images/portafolio/ache/ache3_sm.jpg', './assets/images/portafolio/ache/ache4_sm.jpg'],
+				'large'         : ['./assets/images/portafolio/ache/ache1.jpg', './assets/images/portafolio/ache/ache2.jpg', './assets/images/portafolio/ache/ache3.jpg', './assets/images/portafolio/ache/ache4.jpg'],
+				'img_title'     : ['Login', 'Inicio', 'Detalle de los servicios de la casa', 'Detalle de consumo de gas'],
+				'button_list'   : [],
+				'tags'          : ['Self Portrait']
+      },
+      {
+				'title'         : 'Goexpo',
+				'description'   : 'Maquetación del sistema web.',
+				'thumbnail'     : ['./assets/images/portafolio/goexposys/goexpo1_sm.jpg', './assets/images/portafolio/goexposys/goexpo2_sm.jpg', './assets/images/portafolio/goexposys/goexpo3_sm.jpg'],
+				'large'         : ['./assets/images/portafolio/goexposys/goexpo1.jpg', './assets/images/portafolio/goexposys/goexpo2.jpg', './assets/images/portafolio/goexposys/goexpo3.jpg'],
+				'img_title'     : ['Login', 'Inicio', 'Alta de evento'],
+				'button_list'   : [],
+				'tags'          : ['Self Portrait']
+      },
+      {
+				'title'         : 'Ssleventos',
+				'description'   : 'Apoyo en el desarrollo del sistema.',
+				'thumbnail'     : ['./assets/images/portafolio/ssleventos/ssleventos1_sm.jpg', './assets/images/portafolio/ssleventos/ssleventos2_sm.jpg', './assets/images/portafolio/ssleventos/ssleventos4_sm.jpg', './assets/images/portafolio/ssleventos/ssleventos3_sm.jpg'],
+				'large'         : ['./assets/images/portafolio/ssleventos/ssleventos1.jpg', './assets/images/portafolio/ssleventos/ssleventos2.jpg', './assets/images/portafolio/ssleventos/ssleventos4.jpg', './assets/images/portafolio/ssleventos/ssleventos3.jpg'],
+				'img_title'     : ['Registro de usuario', 'Dashboard de administrador', 'Reporte de un evento', 'Listado de registros'],
+				'button_list'   : [],
+				'tags'          : ['Self Portrait']
+      },
+		]
+	});
 });

@@ -258,6 +258,8 @@ header .container-nav-menu {
     z-index: 5;
     transform: translateX(100%);
     transition: all ease 0.4s 0.6s;
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 .menu.active {
@@ -336,8 +338,8 @@ header .container-nav-menu {
 
 .home-link-contact {
     display: flex;
-    height: 30px;
-    overflow: ;
+    height: 25px;
+    overflow: hidden;
     color: white;
     padding: 0.5em 2em;
     text-decoration: none;
@@ -382,60 +384,21 @@ header .container-nav-menu {
     width: 100%;
 }
 
-.silder-container {
+.og-container-info-gallery {
     width: 100%;
-    min-height: 300px;
-    overflow-x: hidden;
-    position: relative;
-}
-
-.btn-slide-next,
-.btn-slide-prev {
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    top: calc(50% - 25px);
-    z-index: 1;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
     box-sizing: border-box;
-    line-height: 50px;
-    transition: all 0.6s ease;
-}
-
-.btn-slide-next:hover,
-.btn-slide-prev:hover {
-    cursor: pointer;
-}
-
-.btn-slide-next:focus,
-.btn-slide-prev:focus {
-    outline: 0;
-}
-
-.btn-slide-next {
-    right: 0;
-    padding-left: 10px;
-}
-
-.btn-slide-prev {
-    left: 0;
-    padding-right: 10px;
-}
-
-.btn-slide-next svg,
-.btn-slide-prev svg {
-    width: 25px;
-}
-
-.item-work {
-    width: calc(100% - 105px);
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-self: stretch;
     justify-content: center;
+    padding: 0.5em;
+}
+
+.og-container-info-gallery .og-fullimg,
+.og-container-info-gallery .og-details {
+    width: 100%;
+    float: none;
+    padding: 0;
 }
 
 .project-media,
@@ -563,11 +526,18 @@ footer .content-box {
         padding: 0.5em 1em;
     }
 
-    .item-work {
+    .og-container-info-gallery {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .og-container-info-gallery .og-fullimg,
+    .og-container-info-gallery .og-details {
+        box-sizing: border-box;
+        padding: 10px;
+        width: 50%;
     }
 
     .project-media {
