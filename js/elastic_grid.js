@@ -476,7 +476,6 @@ $(function() {
                 $item.data( 'offsetTop', $item.offset().top );
                 if( saveheight ) {
                     $item.find('img').load(function() {
-                        console.log($item.outerHeight());
                         $item.data( 'height', $item.height());
                     }).each(function() {
                       if(this.complete) $(this).load();
@@ -814,6 +813,7 @@ $(function() {
                     if( typeof this.$largeImg !== 'undefined' ) {
                         this.$largeImg.fadeOut( 'fast' );
                     }
+
                     this.$previewEl.css( 'height', 0 );
                     // the current expanded item (might be different from this.$item)
                     var $expandedItem = $items.eq( this.expandedIdx );
@@ -833,13 +833,14 @@ $(function() {
                 var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
                     itemHeight = winsize.height;
 
+
                 //console.log(heightPreview);
-                if( heightPreview < settings.minHeight ) {
+                // if( heightPreview < settings.minHeight ) {
                     heightPreview = settings.minHeight;
                     itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-                }
-                //console.log(heightPreview);
-                //console.log(this.$item.data( 'height' ));
+                // }
+                // console.log(heightPreview);
+                // console.log(this.$item.data( 'height' ));
 
                 this.height = heightPreview;
                 this.itemHeight = itemHeight;
@@ -856,6 +857,7 @@ $(function() {
                     };
 
                 this.calcHeight();
+
                 this.$previewEl.css( 'height', this.height );
                 this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 

@@ -108,22 +108,23 @@ figure {
 }
 
 .og-close {
-	position: absolute;
-	width: 40px;
+	position: relative;
 	height: 40px;
-	top: 10px;
-	right: 10px;
+
 	cursor: pointer;
+	display: block;
+	width: 100%;
 }
 
 .og-close::before,
 .og-close::after {
 	content: '';
 	position: absolute;
-	width: 100%;
+	width: 40px;
 	top: 50%;
-	height: 1px;
-	background: #888;
+	right: 0;
+	height: 2px;
+	background: #f9f9f9;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);

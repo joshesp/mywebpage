@@ -208,13 +208,8 @@ particlesJS('particles-js', particlesJSON);
 
 $(function(){
 	$("#portafolio-gallery").elastic_grid({
-		'showAllText' : 'Todos',
-		'filterEffect': 'popup', // moveup, scaleup, fallperspective, fly, flip, helix , popup
-		'hoverDirection': true,
-		'hoverDelay': 0,
-		'hoverInverse': false,
-		'expandingSpeed': 500,
-		'expandingHeight': 500,
+    'showAllText' : 'Todos',
+    'expandingHeight': 700,
 		'items' :[
 			{
 				'title'         : 'Papprika',
