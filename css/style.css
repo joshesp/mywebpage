@@ -693,3 +693,9 @@ footer .content-box {
         width: 50%;
     }
 }
+
+@media (min-width: 1400px) {
+    #aboutme .content-box {
+        width: 50%;
+    }
+}
