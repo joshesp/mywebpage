@@ -120,7 +120,7 @@ var spanTxt = document.querySelector('.typed-text');
 var spanYear = document.querySelector('.year-text');
 
 var indexWord = 0;
-var words = ['Front-end', 'Back-end', 'Freelancer'];
+var words = ['Front-end', 'Back-end'];
 var speed = 200;
 
 
@@ -258,4 +258,16 @@ $(function(){
       },
 		]
 	});
+});
+
+
+// HOME PAGE HEIGHT
+$(window).load(function() {
+  // will first fade out the loading animation
+  $(".loader").fadeOut();
+    // will fade out the whole DIV that covers the website.
+  $(".preloader").delay(1000).fadeOut("slow");
+
+
+  AOS.init();
 });

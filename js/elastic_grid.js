@@ -247,6 +247,8 @@ $(function() {
                 strTag = strTag.substring(1);
                 liObject.attr('data-tags', strTag);
 
+                liObject.attr('data-aos', 'flip-up');
+
                 //initial a object
                 aObject = $('<a></a>');
                 aObject.attr('href', 'javascript:;;');

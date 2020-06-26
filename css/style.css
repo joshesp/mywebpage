@@ -93,7 +93,7 @@ section {
 
 .spacer {
     width: 100%;
-    height: 75px;
+    height: 100px;
 }
 
 .content-box {
@@ -101,16 +101,115 @@ section {
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0.5em 1em;
-    min-height: 300px;
+    min-height: 100%;
 }
 
-.content-box h3 {
-    font-size: 2rem;
+.content-box .title-section {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+}
+
+.content-box .subtitle-section {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .content-box p {
     font-size: 1.2rem;
     line-height: initial;
+    text-align: center;
+}
+
+/* Preloader */
+
+
+.preloader {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0c0d17;
+    z-index: 99999;
+}
+
+.preloader .loader {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #565DA3;
+    -o-animation:loader 2s infinite ease;
+    -ms-animation:loader 2s infinite ease;
+    -moz-animation:loader 2s infinite ease;
+    -webkit-animation:loader 2s infinite ease;
+    animation: loader 2s infinite ease;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.preloader .loader .loader-inner {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    background-color: #565DA3;
+    -o-animation:loader-inner 2s infinite ease-in;
+    -ms-animation:loader-inner 2s infinite ease-in;
+    -moz-animation:loader-inner 2s infinite ease-in;
+    -webkit-animation:loader-inner 2s infinite ease-in;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
 }
 
 header {
@@ -131,7 +230,7 @@ header {
 
 .header-bg {
     background-color: white;
-    /* box-shadow: 0 1px 1px #f3f3f3; */
+    box-shadow: 0 1px 1px #f3f3f3;
     transition: all 0.3s ease;
 }
 
@@ -307,7 +406,7 @@ header .container-nav-menu {
 #particles-js {
     position: absolute;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 1;
@@ -317,7 +416,7 @@ header .container-nav-menu {
     position: relative;
     display: table-cell;
     vertical-align: middle;
-    width: 95%;
+    width: 100%;
     box-sizing: border-box;
     padding: 0 1em;
 }
@@ -326,6 +425,7 @@ header .container-nav-menu {
     font-size: 3.5rem;
     margin-bottom: 0;
     letter-spacing: -1px;
+    text-align: center;
 }
 
 .home-content h2 {
@@ -334,20 +434,21 @@ header .container-nav-menu {
     letter-spacing: -1px;
     font-weight: 500;
     margin-bottom: 0.5em;
+    text-align: center;
 }
 
 .home-link-contact {
-    display: flex;
-    height: 25px;
+    display: block;
     overflow: hidden;
     color: white;
-    padding: 0.5em 2em;
     text-decoration: none;
     text-align: center;
     font-size: 1.2rem;
     width: 150px;
-    justify-content: space-evenly;
-    align-content: center;
+    margin: 0 auto;
+    margin-top: 2.5em;
+    border-radius: 0.25rem;
+    padding: 0.7em 2em;
 }
 
 .home-link-contact svg {
@@ -355,29 +456,72 @@ header .container-nav-menu {
     fill: white;
 }
 
-.container-services {
+.container-service {
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-self: stretch;
     justify-content: center;
     text-align: center;
+    margin-bottom: 1em;
 }
 
-#aboutme .title-work {
-    font-size: 1.2rem;
+.column-reverse {
+    flex-direction: column-reverse;
 }
 
-.item-service {
+.container-service .service-image,
+.container-service .service-description {
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 1.5em;
 }
 
-.service-image svg {
-    width: 5rem;
+.container-service .service-image {
+    text-align: center;
 }
 
-.title-work {
-    font-size: 1.4rem;
+.container-service .service-image img {
+    width: 100%;
+}
+
+.container-service .service-description h4,
+.container-service .service-description p,
+.container-service .service-description ul {
+    text-align: left;
+}
+
+.container-service .service-description h4 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+.container-service .service-description li {
+    font-size: 1.2rem;
+}
+
+.container-service .service-description a {
+    text-decoration: none;
+    display: table;
+    margin-top: 1em;
+}
+
+.container-service .service-description a span,
+.container-service .service-description a svg {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container-service .service-description a span {
+    font-size: 1.2rem;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.container-service .service-description svg {
+    width: 25px;
 }
 
 .container-project {
@@ -494,36 +638,37 @@ footer .content-box {
         padding: 0;
     }
     
-    .item-service {
-        width: 50%;
-        margin: 0 auto;
-        margin-bottom: 1.5em;
-    }
-    
     .content-box h3 {
         font-size: 3rem;
-    }
-
-    .title-work {
-        font-size: 1.6rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .container-services {
+    .content-box .title-section {
+        margin-bottom: 2em;
+    }
+
+    .container-service {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        margin-bottom: 3em;
     }
 
-    .service-image svg {
-        width: 4rem;
-    }
-
-    .item-service {
+    .container-service .service-image,
+    .container-service .service-description {
         box-sizing: border-box;
-        padding: 0.5em 1em;
+    }
+
+    .container-service .service-image {
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .container-service .service-description {
+        width: 50%;
+        box-sizing: border-box;
     }
 
     .og-container-info-gallery {
@@ -547,22 +692,4 @@ footer .content-box {
     .project-description {
         width: 50%;
     }
-
-    /* .container-footer {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    .container-footer .container-logo {
-        text-align: right;
-    }
-
-    .container-footer .container-email {
-        text-align: left;
-    }     
-
-    .container-footer .container-email p {
-        display: block;
-    } */
 }
